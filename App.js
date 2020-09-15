@@ -36,8 +36,8 @@ export default class App extends Component {
     const { playerOneName } = this.state;
     this.setState({ playerOneName: '' })
     try {
-      let response = await fetch('https://53a0077d3b50.ngrok.io/player-one-name?name=' + playerOneName);
-      // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/player-one-name?name=' + this.state.playerOneName);
+      // let response = await fetch('https://53a0077d3b50.ngrok.io/player-one-name?name=' + playerOneName);
+      let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/player-one-name?name=' + this.state.playerOneName);
       return response
     } catch (error) {
       console.error(error);
@@ -48,8 +48,8 @@ export default class App extends Component {
     const { playerTwoName } = this.state;
     this.setState({ playerTwoName: '' })
     try {
-      let response = await fetch('https://53a0077d3b50.ngrok.io/player-two-name?name=' + playerTwoName);
-      // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/player-one-name?name=' + this.state.playerOneName);
+      // let response = await fetch('https://53a0077d3b50.ngrok.io/player-two-name?name=' + playerTwoName);
+      let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/player-one-name?name=' + this.state.playerOneName);
       return response
     } catch (error) {
       console.error(error);
@@ -136,8 +136,8 @@ export default class App extends Component {
 
 async function startTimer() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/start');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/start');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/start');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/start');
 
     return response;
   } catch (error) {
@@ -147,8 +147,8 @@ async function startTimer() {
 
 async function resetTimer() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/reset');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/reset');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/reset');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/reset');
 
     return response;
   } catch (error) {
@@ -158,8 +158,8 @@ async function resetTimer() {
 
 async function stopTimer() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/stop');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/stop');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/stop');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/stop');
     return response;
   } catch (error) {
     console.error(error);
@@ -168,8 +168,8 @@ async function stopTimer() {
 
 async function addPlayerOnePoint() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/addPlayerOnePoint');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/addPlayerOnePoint');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/addPlayerOnePoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/addPlayerOnePoint');
     return response;
   } catch (error) {
     console.error(error);
@@ -179,8 +179,8 @@ async function addPlayerOnePoint() {
 
 async function subtractPlayerOnePoint() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/subtractPlayerOnePoint');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subractPlayerOnePoint');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/subtractPlayerOnePoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subractPlayerOnePoint');
     return response;
   } catch (error) {
     console.error(error);
@@ -190,8 +190,8 @@ async function subtractPlayerOnePoint() {
 
 async function clearPlayerOnePoint() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/clearPlayerOnePoint');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/clearPlayerOnePoint');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/clearPlayerOnePoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/clearPlayerOnePoint');
     return response;
   } catch (error) {
     console.error(error);
@@ -201,8 +201,8 @@ async function clearPlayerOnePoint() {
 
 async function addPlayerTwoPoint() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/addPlayerTwoPoint');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/addPlayerTwoPoint');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/addPlayerTwoPoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/addPlayerTwoPoint');
     return response;
   } catch (error) {
     console.error(error);
@@ -212,8 +212,8 @@ async function addPlayerTwoPoint() {
 
 async function subtractPlayerTwoPoint() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/subtractPlayerTwoPoint');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subractPlayerTwoPoint');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/subtractPlayerTwoPoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subractPlayerTwoPoint');
     return response;
   } catch (error) {
     console.error(error);
@@ -223,8 +223,8 @@ async function subtractPlayerTwoPoint() {
 
 async function clearPlayerTwoPoint() {
   try {
-    let response = await fetch('https://53a0077d3b50.ngrok.io/clearPlayerTwoPoint');
-    // let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/clearPlayerTwoPoint');
+    // let response = await fetch('https://53a0077d3b50.ngrok.io/clearPlayerTwoPoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/clearPlayerTwoPoint');
     return response;
   } catch (error) {
     console.error(error);
