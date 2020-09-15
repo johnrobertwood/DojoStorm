@@ -180,7 +180,7 @@ async function addPlayerOnePoint() {
 async function subtractPlayerOnePoint() {
   try {
     // let response = await fetch('https://53a0077d3b50.ngrok.io/subtractPlayerOnePoint');
-    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subractPlayerOnePoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subtractPlayerOnePoint');
     return response;
   } catch (error) {
     console.error(error);
@@ -213,7 +213,7 @@ async function addPlayerTwoPoint() {
 async function subtractPlayerTwoPoint() {
   try {
     // let response = await fetch('https://53a0077d3b50.ngrok.io/subtractPlayerTwoPoint');
-    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subractPlayerTwoPoint');
+    let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/subtractPlayerTwoPoint');
     return response;
   } catch (error) {
     console.error(error);
