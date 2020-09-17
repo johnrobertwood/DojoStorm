@@ -49,7 +49,7 @@ export default class App extends Component {
     this.setState({ playerTwoName: '' })
     try {
       // let response = await fetch('https://53a0077d3b50.ngrok.io/player-two-name?name=' + playerTwoName);
-      let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/player-one-name?name=' + this.state.playerOneName);
+      let response = await fetch('http://smooth-server-env.eba-2nxttkpc.us-east-2.elasticbeanstalk.com/player-two-name?name=' + this.state.playerTwoName);
       return response
     } catch (error) {
       console.error(error);
@@ -66,6 +66,34 @@ export default class App extends Component {
             <View style={styles.body}>
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Dojo Storm</Text>
+              </View>
+              <View style={styles.buttonContainer}>
+                <TextInput
+                  placeholder="Player One Name"
+                  maxLength={20}
+                  value={playerOneName}
+                  onChangeText={this.onPlayerOneNameChange}
+                  style={styles.input}
+                  onBlur={Keyboard.dismiss}
+                  autoCorrect={false}
+                />
+                <TouchableHighlight onPress={() => this.onSubmitP1(this.state.playerOneName)} style={styles.button} >
+                  <Text> Submit </Text>
+                </TouchableHighlight>
+              </View>
+              <View style={styles.buttonContainer}>
+                <TextInput
+                  placeholder="Player Two Name"
+                  maxLength={20}
+                  value={playerTwoName}
+                  onChangeText={this.onPlayerTwoNameChange}
+                  style={styles.input}
+                  onBlur={Keyboard.dismiss}
+                  autoCorrect={false}
+                />
+                <TouchableHighlight onPress={() => this.onSubmitP2(this.state.playerTwoName)} style={styles.button}>
+                  <Text> Submit </Text>
+                </TouchableHighlight>
               </View>
               <View style={styles.buttonContainer}>
                 <TouchableHighlight onPress={() => { startTimer() }} style={styles.button}>
@@ -98,32 +126,6 @@ export default class App extends Component {
                 </TouchableHighlight>
                 <TouchableHighlight onPress={() => { clearPlayerTwoPoint() }} style={styles.button}>
                   <Text style={styles.buttonText}> CLEAR P2 </Text>
-                </TouchableHighlight>
-              </View>
-              <View style={styles.buttonContainer}>
-                <TextInput
-                  placeholder="Player One Name"
-                  maxLength={20}
-                  value={playerOneName}
-                  onChangeText={this.onPlayerOneNameChange}
-                  style={styles.input}
-                  onBlur={Keyboard.dismiss}
-                />
-                <TouchableHighlight onPress={() => this.onSubmitP1(this.state.playerOneName)} style={styles.button} >
-                  <Text> Submit </Text>
-                </TouchableHighlight>
-              </View>
-              <View style={styles.buttonContainer}>
-                <TextInput
-                  placeholder="Player Two Name"
-                  maxLength={20}
-                  value={playerTwoName}
-                  onChangeText={this.onPlayerTwoNameChange}
-                  style={styles.input}
-                  onBlur={Keyboard.dismiss}
-                />
-                <TouchableHighlight onPress={() => this.onSubmitP2(this.state.playerTwoName)} style={styles.button}>
-                  <Text> Submit </Text>
                 </TouchableHighlight>
               </View>
             </View>
